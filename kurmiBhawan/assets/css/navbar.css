@@ -1,0 +1,688 @@
+﻿/* ── Reset & Base ── */
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--themewhite);
+    font-family: poppins, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #363636;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ── Fonts ── */
+/* @font-face {
+    font-family: 'Titillium';
+    src: url('../Fonts/TitilliumWeb-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Comfortaa-Bold';
+    src: url('../Fonts/Comfortaa-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Comfortaa-Regular';
+    src: url('../Fonts/Comfortaa-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Exo';
+    src: url('../Fonts/Exo-VariableFont_wght.ttf') format('truetype');
+} */
+
+/* ── CSS Variables ── */
+:root {
+    --themewhite: #fff;
+    --themecolor: #05346D;
+    --themecolor1: #124481;
+    --themecolor2: #ffab17;
+}
+
+/* ═══════════════════════════
+   HEADER
+═══════════════════════════ */
+.header {
+    position: relative;
+}
+
+/* Logo row — holds logo, Mission Karmayogi btn, and partner logos */
+.Logo_sec {
+    display: flex;
+    align-items: center;
+    padding: 5px 30px;
+    position: relative;
+}
+
+/* ── Logo block ── */
+.home_logo {
+    position: relative;
+    z-index: 9;
+}
+
+.home_logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin: 10px 0;
+    margin-top: -20px;
+}
+
+.home_logo a img {
+    width: 120px;
+    margin-top: 28px;
+    margin-bottom: -7px;
+    margin-left: -32px;
+    margin-right: 0px;
+
+}
+
+/* Academy name text — inside <a>, sibling of <img> */
+.Logo_sec div {
+    font-size: 28px;
+    color: var(--themecolor1);
+    margin-left: 20px;
+    padding-bottom: 12px;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.Logo_sec div span {
+    display: block;
+    color: var(--themecolor2);
+    margin-left: 1px;
+    margin-bottom: 12px;
+    padding-top: 3px;
+    font-weight: 700;
+
+}
+
+/* ── Mission Karmayogi button ── */
+.main_btn {
+    visibility: visible;
+    opacity: 1;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+    background-color: var(--themecolor2);
+    border: 1px solid #e99500;
+    color: var(--themewhite) !important;
+    position: relative;
+    z-index: 0;
+    text-align: center;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 1;
+    padding: 9px 13px;
+    border-radius: 5px;
+}
+
+.main_btn::before,
+.main_btn::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--themecolor1);
+    z-index: -1;
+    transition: all 0.4s ease-out;
+    border-radius: 99px;
+    transform: scaleY(0);
+}
+
+.main_btn:hover::before,
+.main_btn:hover::after {
+    border-radius: 0;
+    transform: scale(1);
+}
+
+.main_btn:hover {
+    background: var(--themecolor1);
+    border: 1px solid #00295a;
+}
+
+/* Karmayogi button specific position */
+.top_btn_krm {
+    position: absolute;
+    right: 260px;
+    top: 72px;
+    background-color: #ff7b22;
+    border: 1px solid #ff7417;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0% {
+        background: #ff7b22;
+    }
+
+    25% {
+        background: var(--themecolor2);
+        border-color: #f79e00;
+    }
+
+    50% {
+        background: #ff7b22;
+    }
+
+    75% {
+        background: var(--themecolor2);
+        border-color: #f79e00;
+    }
+
+    100% {
+        background: #ff7b22;
+    }
+}
+
+/* ── Partner logos (right side of header) ── */
+.other_site {
+    position: absolute;
+    right: 20px;
+    top: 55px;
+    display: flex;
+    align-items: center;
+}
+
+.Up_logo img {
+    width: 65px;
+}
+
+img.Mahakumbh_logo {
+    width: 67px;
+    margin-right: 6px;
+    margin-left: 3px;
+}
+
+img.kta_logo {
+    margin-left: -12px;
+    width: 74px;
+}
+
+/* ═══════════════════════════
+   NAVBAR
+═══════════════════════════ */
+.nav_bar {
+    position: relative;
+}
+
+svg.menu_svg {
+    width: 269px;
+    position: absolute;
+    transform: scaleX(-1);
+    fill: #fff;
+    margin-left: -113px;
+    margin-top: 3px;
+    z-index: 0;
+}
+
+nav.navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: var(--themecolor1) !important;
+    border-bottom: 1px solid #063268;
+    margin-top: -35px;
+    padding: 0;
+    height: 49px;
+    box-shadow: 0px 6px 10px rgb(0 0 0 / 16%);
+    transition: 0.3s linear;
+}
+
+nav.navbar.fixed_header {
+    margin-top: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    box-shadow: 0 3px 4px rgb(0 0 0 / 17%);
+    animation: translateHeader .8s;
+}
+
+nav.navbar.fixed_header svg.menu_svg {
+    display: none;
+}
+
+.common_container {
+    width: 100%;
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+/* ── Hamburger ── */
+.navbar-toggler {
+    display: none;
+    padding: 8px;
+    cursor: pointer;
+    background: none;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    color: #ffffff;
+    margin-left: auto;
+    margin-right: 20px;
+    transition: 0.15s linear;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+    color: #cbcbcb;
+}
+
+/* ── Nav list ── */
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    padding-left: 80px;
+    margin: 0;
+    position: relative;
+    z-index: 99;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 3px;
+    position: relative;
+}
+
+.navbar-nav>.nav-item:nth-child(2) {
+    margin: 0;
+}
+
+/* Underline hover indicator */
+.navbar-nav>.nav-item::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    bottom: 6px;
+    left: 0;
+    transition: 400ms ease;
+    transform: scaleX(1.5);
+    opacity: 0;
+}
+
+.navbar-nav>.nav-item.icon::after {
+    margin-left: 7px;
+}
+
+.navbar-nav>.nav-item:hover::after {
+    transform: scaleX(1);
+    opacity: 1;
+}
+
+/* Nav links */
+.nav-link,
+.nav-link:hover,
+.nav-link:focus {
+    color: #fff;
+}
+
+.navbar-nav .nav-link {
+    padding: 12px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    transition: 150ms ease;
+}
+
+/* Active state */
+.nav-item.active {
+    color: #000 !important;
+    background-color: var(--themecolor1);
+}
+
+/* Training Portal button */
+li.menu_rght_btn {
+    position: absolute !important;
+    top: -1px;
+    right: -10px;
+    line-height: 25.5px;
+    background: #a732a6;
+    transition: 150ms ease;
+}
+
+/* Arrow indicator for items with dropdowns */
+.nav-item.icon>a::before {
+    content: "";
+    position: absolute;
+    right: -4px;
+    top: calc(53% + 0px);
+    transform: translateY(-50%);
+    border: 4px solid transparent;
+    border-left-color: inherit;
+    transition: 0.15s linear;
+}
+
+.nav-item.icon:hover>a::before {
+    transform: rotate(90deg);
+}
+
+/* ── Dropdown ── */
+.nav-item .dropdown {
+    width: 240px;
+    display: block;
+    position: absolute;
+    top: 47px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(5px);
+    z-index: 9999;
+    transition: all 300ms ease 0s;
+    padding: 10px;
+    border-bottom: 4px solid var(--themecolor2);
+    background: #e9e9e9;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 5px 0px;
+}
+
+.nav-item .dropdown .nav-link {
+    color: #000;
+    padding: 6px;
+    font-weight: 500;
+    border-bottom: 1px solid #042e65;
+}
+
+.nav-item .dropdown .nav-link:hover {
+    color: var(--themecolor1);
+}
+
+.nav-item .dropdown .nav-item:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.nav-item .dropdown>.nav-item:hover>.nav-link {
+    color: var(--themecolor1);
+    font-weight: 600;
+}
+
+/* Nested (2nd level) dropdown */
+.nav-item .dropdown .dropdown {
+    top: 3px;
+    left: calc(100% + 20px);
+    margin-left: 3px;
+    border-top: 0;
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.nav-item:hover>.dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+
+/* ── Mobile close button ── */
+.nav-close {
+    margin-left: auto;
+    margin-top: 10px;
+    display: none;
+}
+
+.nav-close .btn-nav-close {
+    border: 1px solid #fff;
+    padding: 0;
+    padding-top: 2px;
+    outline: 0;
+    background: transparent;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-close .btn-nav-close .close-btn {
+    transform: rotate(45deg);
+    font-size: 30px;
+    color: #fff;
+    margin-left: -8px;
+}
+
+.nav-close .btn-nav-close:hover,
+.nav-close .btn-nav-close:focus {
+    background: #fff;
+}
+
+/* ── Scrollbar ── */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--themecolor) #ffffff;
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #f3f7fd;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--themecolor);
+    border-radius: 5px;
+    border: 2px solid #ffffff;
+}
+
+/* ═══════════════════════════
+   MOBILE BREADCRUMB
+═══════════════════════════ */
+.mobile-breadcrumb {
+    background: linear-gradient(135deg, var(--themecolor) 0%, var(--themecolor1) 100%);
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #fff;
+    min-height: 40px;
+}
+
+.breadcrumb-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    font-size: 13px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.breadcrumb-back:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateX(-2px);
+}
+
+.breadcrumb-back i {
+    font-size: 12px;
+}
+
+.breadcrumb-path {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* ═══════════════════════════
+   RESPONSIVE
+═══════════════════════════ */
+@media (max-width: 1123px) {
+    .navbar-nav .nav-link {
+        font-size: 13px !important;
+        padding: 10px 7px;
+    }
+}
+
+@media (max-width: 1020px) {
+    .navbar-toggler {
+        display: block;
+    }
+
+    .top_btn_krm {
+        right: 10px;
+        top: auto;
+        bottom: -40px;
+        font-size: 12px !important;
+    }
+
+    .other_site {
+        right: 5px;
+        top: 10px;
+    }
+
+    .Up_logo img {
+        width: 45px;
+    }
+
+    img.Mahakumbh_logo {
+        width: 45px;
+    }
+
+    img.kta_logo {
+        width: 50px;
+    }
+
+    .home_logo a div {
+        font-size: 18px;
+    }
+
+    .nav-item.icon>a::before {
+        right: 2px !important;
+        top: 15px !important;
+        transform: translateY(-50%);
+    }
+
+    .nav-item.active {
+        background: var(--themecolor);
+    }
+
+    .nav-item .dropdown {
+        background: var(--themecolor1);
+        padding: 3px 1px !important;
+        position: initial;
+        max-height: 0;
+        width: 100%;
+        border: none;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+
+    .nav-item .dropdown .nav-link {
+        border-bottom: none;
+    }
+
+    .nav-item:hover>.dropdown {
+        max-height: initial;
+    }
+
+    .navbar-nav {
+        background: var(--themecolor);
+        flex-direction: column;
+        padding: 0 20px;
+        opacity: 0;
+        transition: 400ms ease;
+        position: absolute;
+        left: -80%;
+        top: 0;
+        width: 80%;
+        height: 0;
+        overflow-y: auto;
+        transform: translateX(-80%);
+        z-index: 99999999;
+    }
+
+    .navbar-nav .nav-link {
+        margin: 3px 0;
+        color: #fff;
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-nav>.nav-item:first-child {
+        margin-top: 20px;
+    }
+
+    .navbar-nav>.nav-item:last-child {
+        margin-bottom: 20px;
+    }
+
+    .navbar-nav .nav-item:not(:last-child) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-nav>.nav-item::after {
+        display: none;
+    }
+
+    .navbar-nav .nav-close {
+        display: block;
+        float: right;
+        position: relative;
+        z-index: 99;
+        margin-right: 0;
+    }
+
+    .navbar-nav.active {
+        display: inline-table;
+        width: 80%;
+        height: auto;
+        opacity: 1;
+        overflow: hidden;
+        transform: translateX(0);
+        left: 10%;
+        box-shadow: 0px 0px 0 10000px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-item.icon a::before {
+        top: unset;
+        right: 0;
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 576px) {
+    .Logo_sec {
+        padding: 5px 10px;
+    }
+
+    .home_logo a div {
+        font-size: 15px;
+    }
+
+    .home_logo a img {
+        width: 65px;
+    }
+
+    .other_site {
+        display: none;
+    }
+
+    .top_btn_krm {
+        display: none;
+    }
+}
