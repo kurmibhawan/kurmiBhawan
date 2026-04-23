@@ -66,3 +66,57 @@ function next() {
 autoTimer = setInterval(next, 3500);
 sliderTrack.addEventListener('mouseenter', () => clearInterval(autoTimer));
 sliderTrack.addEventListener('mouseleave', () => { autoTimer = setInterval(next, 3500); });
+
+// Events Crausel
+const tsTrack = document.querySelector('.ts-track');
+const tsSlides = document.querySelectorAll('.ts-slide');
+const tsNext = document.querySelector('.ts-next');
+const tsPrev = document.querySelector('.ts-prev');
+
+let tsIndex = 0;
+const totalTS = tsSlides.length;
+
+function updateTS() {
+    tsTrack.style.transform = `translateX(-${tsIndex * 100}%)`;
+
+    tsSlides.forEach(s => s.classList.remove('active'));
+    tsSlides[tsIndex].classList.add('active');
+}
+
+tsNext.addEventListener('click', () => {
+    tsIndex = (tsIndex + 1) % totalTS;
+    updateTS();
+});
+
+tsPrev.addEventListener('click', () => {
+    tsIndex = (tsIndex - 1 + totalTS) % totalTS;
+    updateTS();
+});
+
+/* Auto slide */
+setInterval(() => {
+    tsIndex = (tsIndex + 1) % totalTS;
+    updateTS();
+}, 4000);
+
+
+// gallary
+
+const gallaryCards = document.querySelectorAll('.gallery-card');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+gallaryCards.forEach(card => observer.observe(card));
+
+// charity crausel
+
+const ctrack = document.getElementById("charityTrack");
+
+// clone content for seamless loop
+track.innerHTML += ctrack.innerHTML;
