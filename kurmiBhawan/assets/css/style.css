@@ -1,3 +1,11 @@
+/* ── CSS Variables ── */
+:root {
+    --themewhite: #fff;
+    --themecolor: #05346D;
+    --themecolor1: #4a0302;
+    --themecolor2: #ffab17;
+}
+
 /* ── Reset & Base ── */
 html,
 body {
@@ -16,13 +24,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* ── CSS Variables ── */
-:root {
-    --themewhite: #fff;
-    --themecolor: #05346D;
-    --themecolor1: #124481;
-    --themecolor2: #ffab17;
-}
 
 
 /* Topbar */
