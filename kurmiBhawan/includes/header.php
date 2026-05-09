@@ -1,8 +1,7 @@
-
-
 <!-- TOP BAR -->
 <div class="topbar">
-    <span>उत्तर प्रदेश सरकार | GOVERNMENT OF UTTAR PRADESH</span>
+    <span>पंजीकरण संख्या - 771/1984 </span>
+    <span>धारा 80(G) व 12(A) में छूट प्राप्त राष्ट्रीय स्तर की चैरिटी संस्था </span>
 </div>
 
 
