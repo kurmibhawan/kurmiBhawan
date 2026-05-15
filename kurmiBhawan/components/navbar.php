@@ -38,9 +38,9 @@
                 <li class="nav-item icon">
                     <a href="javascript:void(0);" title="हमारे बारे में" class="nav-link">हमारे बारे में</a>
                     <ul class="dropdown">
-                        <li class="nav-item"><a class="nav-link" href="Pages/History.aspx"
+                        <li class="nav-item"><a class="nav-link" href="Pages/about.php"
                                 title="कूर्मि क्षत्रिय सभा लखनऊ - एक परिचय">कूर्मि क्षत्रिय सभा लखनऊ - एक परिचय</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Pages/MissionStatement.aspx"
+                        <li class="nav-item"><a class="nav-link" href="pages/flag_song.php"
                                 title="कुर्मी ध्वज गीत ">कुर्मी ध्वज गीत</a></li>
                         <li class="nav-item"><a class="nav-link" href="Pages/BoardGovernors.aspx"
                                 title="स्वजातीय प्रतीक">स्वजातीय प्रतीक</a></li>

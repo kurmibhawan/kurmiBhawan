@@ -488,11 +488,12 @@ body {
 
 .section-heading .highlight {
     color: #f5a623;
-    font-style: italic;
+    /* font-style: italic; */
 }
 
 /* DG message content placeholder */
 .dg-content {
+    text-align: justify;
     color: rgba(255, 255, 255, 0.75);
     font-size: 15px;
     line-height: 1.9;
@@ -1559,12 +1560,12 @@ body {
     position: relative;
     background: linear-gradient(135deg, #123b6d, #0e2f57);
     color: #fff;
-    padding: 50px 40px 20px;
+    padding: 60px 40px 20px;
     overflow: hidden;
-    animation: fadeIn 1s ease;
+    font-family: Arial, sans-serif;
 }
 
-
+/* ANIMATION */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -1573,10 +1574,15 @@ body {
 
     to {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
-/* DIAGONAL SHAPES */
+.custom-footer {
+    animation: fadeIn 1s ease;
+}
+
+/* SHAPES */
 .custom-footer::before,
 .custom-footer::after {
     content: "";
@@ -1597,16 +1603,26 @@ body {
 
 /* CONTAINER */
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
     position: relative;
     z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: nowrap;
 }
 
 /* LEFT */
+.footer-left,
+.footer-links,
+.footer-contact,
+.footer-map {
+    flex: 1;
+}
+
 .footer-left {
-    max-width: 600px;
+    flex: 1.5;
 }
 
 .footer-logo {
@@ -1616,74 +1632,168 @@ body {
 }
 
 .footer-logo img {
-    width: 60px;
+    width: 85px;
 }
 
 .footer-logo h2 {
-    font-size: 22px;
+    font-size: 24px;
     margin: 0;
 }
 
 .footer-logo p {
-    font-size: 14px;
-    margin: 0;
+    margin: 5px 0 0;
     opacity: 0.8;
 }
 
 .footer-desc {
     margin-top: 20px;
-    line-height: 1.6;
-    font-size: 14px;
+    line-height: 1.8;
+    font-size: 15px;
+    text-align: justify;
 }
 
 .footer-desc span {
-    color: orange;
+    color: #ffb347;
 }
 
-/* RIGHT LINKS */
+/* LINKS */
 .footer-links {
     display: flex;
-    gap: 60px;
+    justify-content: space-between;
+    gap: 40px;
 }
 
-.footer-links a {
+.footer-column h4,
+.footer-contact h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #ffb347;
+}
+
+.footer-column a {
     display: block;
     color: #fff;
     text-decoration: none;
     margin-bottom: 10px;
-    font-size: 14px;
     transition: 0.3s;
+    font-size: 14px;
 }
 
-.footer-links a:hover {
-    color: orange;
+.footer-column a:hover {
+    color: #ffb347;
     transform: translateX(5px);
+}
+
+/* CONTACT */
+.footer-contact p {
+    margin-bottom: 12px;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* MAP */
+.footer-map iframe {
+    width: 100%;
+    max-width: 320px;
+    height: 220px;
+    border: 0;
+    border-radius: 12px;
 }
 
 /* BOTTOM */
 .footer-bottom {
-    margin-top: 40px;
-    padding-top: 15px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
     position: relative;
     z-index: 2;
+
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 14px;
 }
 
 /* RESPONSIVE */
-@media(max-width: 900px) {
+@media (max-width: 1200px) {
+
     .footer-container {
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 
+    .footer-left {
+        width: 100%;
+        flex: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .footer-container {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .footer-logo h2 {
+        font-size: 16px;
+        /* margin: 0; */
+    }
+
+    .footer-logo p {
+        font-size: 12px;
+    }
+
+    .footer-logo img {
+        width: 60px;
+    }
+
+    .footer-desc {
+        line-height: 1.5;
+        font-size: 13px;
+    }
+
+    .footer-left,
+    .footer-links,
+    .footer-contact,
+    .footer-map {
+        width: 100%;
+    }
+
+    .footer-column h4,
+    .footer-contact h4 {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+    .footer-column a,
+    .footer-contact p {
+        font-size: 13px;
+        margin-bottom: 4px;
+    }
+
+
     .footer-links {
-        justify-content: space-between;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .footer-map iframe {
+        max-width: 100%;
+        height: 250px;
     }
 
     .footer-bottom {
         flex-direction: column;
-        gap: 10px;
+        text-align: center;
+        gap: 0px;
+        margin-top: 10px;
+        padding-top: 0px;
+        font-size: 11px;
+    }
+
+    .footer-bottom p:nth-child(2) {
+        margin: 0px;
     }
 }
