@@ -8,7 +8,7 @@
       <div class="row">
         <div class="card">
           <div class="photo-wrap">
-            <img src="assets/images/cm.jpg" alt="Yogi Aditya Nath"
+            <img src="assets/images/banner1.jpg" alt="Yogi Aditya Nath"
               onerror="this.parentElement.innerHTML='<div class=\'avatar-placeholder\'>YA</div>'">
           </div>
           <h3>श्री डी.एम. कटियार</h3>
@@ -16,7 +16,7 @@
         </div>
         <div class="card">
           <div class="photo-wrap">
-            <img src="assets/images/cm.jpg" alt="Yogi Aditya Nath"
+            <img src="assets/images/abc.png" alt="Yogi Aditya Nath"
               onerror="this.parentElement.innerHTML='<div class=\'avatar-placeholder\'>YA</div>'">
           </div>
           <h3>श्री हरीश वर्मा </h3>

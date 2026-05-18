@@ -3,7 +3,8 @@
         <div class="home_logo">
             <a href="index"
                 title="Uttar Pradesh Academy of Administration & Management, Government of Uttar Pradesh, India">
-                <img src="assets/images/logo.png" alt="Logo of Uttar Pradesh Academy of Administration & Management">
+                <img src="http://localhost/kurmibhawan/kurmiBhawan/assets/images/logo.png"
+                    alt="Logo of Uttar Pradesh Academy of Administration & Management">
             </a>
         </div>
         <div>
