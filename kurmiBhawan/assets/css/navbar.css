@@ -1,5 +1,128 @@
-﻿a {
+﻿/* ── CSS Variables ── */
+:root {
+    --themewhite: #fff;
+    --themecolor: #05346D;
+    --themecolor1: #4a0302;
+    --themecolor2: #ffab17;
+}
+
+/* ── Reset & Base ── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--themewhite);
+    font-family: poppins, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #363636;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+a {
     text-decoration: none;
+}
+
+.topbar {
+    background: #003366;
+    color: #fff;
+    padding: 5px 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Header */
+/* HEADER BASE */
+.main-header {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    height: 100px;
+    position: relative;
+}
+
+/* CURVED LOGO SECTION */
+.logo-section {
+    background: #fff;
+    width: 180px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* 🔥 CURVE EFFECT */
+    border-bottom-right-radius: 60px;
+    box-shadow: 3px 0 8px rgba(0, 0, 0, 0.08);
+    z-index: 2;
+}
+
+.logo-section img {
+    height: 70px;
+}
+
+/* TITLE */
+.title-section {
+    padding-left: 20px;
+}
+
+.title-section h1 {
+    margin: 0;
+    font-size: 26px;
+    color: #1f3c6d;
+}
+
+.title-section p {
+    margin: 0;
+    color: #f57c00;
+    font-weight: bold;
+}
+
+/* RIGHT SIDE */
+.right-section {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-right: 20px;
+}
+
+/* BUTTON */
+.mk-btn {
+    background: #f57c00;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ICONS */
+.header-icons img {
+    height: 45px;
+    margin-left: 5px;
+}
+
+/* Navbar */
+
+.portal-btn {
+    background: purple;
+    padding: 8px 12px;
 }
 
 /* ═══════════════════════════
@@ -182,9 +305,8 @@ nav.navbar {
     display: flex;
     align-items: center;
     position: relative;
-    /* background: #7A1E1E !important; */
     background: var(--themecolor1) !important;
-    border-bottom: 1px solid #063268;
+    border-bottom: 1px solid #710301;
     margin-top: -35px;
     padding: 0;
     height: 49px;
@@ -726,8 +848,8 @@ li.menu_rght_btn:hover {
     }
 
     .home_logo a img {
-        width: 65px;
-        padding-left: 23px;
+        width: 98px;
+        padding-left: 15px;
     }
 
     .other_site {
@@ -736,5 +858,8 @@ li.menu_rght_btn:hover {
 
     .top_btn_krm {
         display: none;
+    }
+    .Logo_sec div span {
+        font-size: 15px;
     }
 }

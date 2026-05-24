@@ -1,7 +1,7 @@
 <section class="header">
     <div class="Logo_sec">
         <div class="home_logo">
-            <a href="index"
+            <a href="../index.php"
                 title="Uttar Pradesh Academy of Administration & Management, Government of Uttar Pradesh, India">
                 <img src="http://localhost/kurmibhawan/kurmiBhawan/assets/images/logo.png"
                     alt="Logo of Uttar Pradesh Academy of Administration & Management">
@@ -33,21 +33,21 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="Index.aspx" title="होम " class="nav-link">होम</a>
+                    <a href="../index.php" title="होम " class="nav-link">होम</a>
                 </li>
 
                 <li class="nav-item icon">
                     <a href="javascript:void(0);" title="हमारे बारे में" class="nav-link">हमारे बारे में</a>
                     <ul class="dropdown">
-                        <li class="nav-item"><a class="nav-link" href="Pages/about.php"
+                        <li class="nav-item"><a class="nav-link" href="../pages/about.php"
                                 title="कूर्मि क्षत्रिय सभा लखनऊ - एक परिचय">कूर्मि क्षत्रिय सभा लखनऊ - एक परिचय</a></li>
-                        <li class="nav-item"><a class="nav-link" href="pages/flag_song.php"
+                        <li class="nav-item"><a class="nav-link" href="../pages/flag_song.php"
                                 title="कुर्मी ध्वज गीत ">कुर्मी ध्वज गीत</a></li>
                         <li class="nav-item"><a class="nav-link" href="Pages/BoardGovernors.aspx"
                                 title="स्वजातीय प्रतीक">स्वजातीय प्रतीक</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Pages/OS.aspx"
+                        <li class="nav-item"><a class="nav-link" href="../pages/member_terms.php"
                                 title="अध्यक्षों का कार्यकाल ">अध्यक्षों का कार्यकाल</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Page/WhosWho.aspx"
+                        <li class="nav-item"><a class="nav-link" href="../pages/mahapurush.php"
                                 title="महामंत्रियों का कार्यकाल">महामंत्रियों का कार्यकाल</a></li>
                         <li class="nav-item"><a class="nav-link" href="Pages/Campus.aspx"
                                 title="कोषाध्यक्षों का कार्यकाल">कोषाध्यक्षों का कार्यकाल</a></li>
