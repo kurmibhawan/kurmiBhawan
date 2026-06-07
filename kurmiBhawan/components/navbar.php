@@ -43,7 +43,7 @@
                                 title="कूर्मि क्षत्रिय सभा लखनऊ - एक परिचय">कूर्मि क्षत्रिय सभा लखनऊ - एक परिचय</a></li>
                         <li class="nav-item"><a class="nav-link" href="../pages/flag_song.php"
                                 title="कुर्मी ध्वज गीत ">कुर्मी ध्वज गीत</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Pages/BoardGovernors.aspx"
+                        <li class="nav-item"><a class="nav-link" href="../pages/ethnic_symbol.php"
                                 title="स्वजातीय प्रतीक">स्वजातीय प्रतीक</a></li>
                         <li class="nav-item"><a class="nav-link" href="../pages/member_terms.php"
                                 title="अध्यक्षों का कार्यकाल ">अध्यक्षों का कार्यकाल</a></li>
@@ -58,31 +58,34 @@
                     <a href="javascript:void(0);" title="मैनेजमेंट बॉडी" class="nav-link">मैनेजमेंट बॉडी </a>
                     <ul class="dropdown">
                         <li class="nav-item">
-                            <a class="nav-link" href="#" title="राष्ट्रीय कार्यकारिणी सूची 2025">
+                            <a class="nav-link" href="../pages/list_2025.php" title="राष्ट्रीय कार्यकारिणी सूची 2025">
                                 राष्ट्रीय कार्यकारिणी सूची 2025
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#" title="राष्ट्रीय युवा कार्यकारिणी सूची 2025">
+                            <a class="nav-link" href="../pages/yuva_list.php"
+                                title="राष्ट्रीय युवा कार्यकारिणी सूची 2025">
                                 राष्ट्रीय युवा कार्यकारिणी सूची 2025
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#" title="प्रदेश कार्यकारिणी सूची 2025">
+                            <a class="nav-link" href="../pages/pradesh_committee_2025.php"
+                                title="प्रदेश कार्यकारिणी सूची 2025">
                                 प्रदेश कार्यकारिणी सूची 2025
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#" title="प्रदेश युवा कार्यकारिणी सूची 2025">
+                            <a class="nav-link" href="../pages/pradesh_youth_committee_2025.php"
+                                title="प्रदेश युवा कार्यकारिणी सूची 2025">
                                 प्रदेश युवा कार्यकारिणी सूची 2025
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#" title="जिला कार्यकारिणी सूची 2025">
+                            <a class="nav-link" href="../pages/jila_list.php" title="जिला कार्यकारिणी सूची 2025">
                                 जिला कार्यकारिणी सूची 2025
                             </a>
                         </li>
